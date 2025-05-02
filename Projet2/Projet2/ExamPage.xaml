@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Projet2.ExamPage"
+             Title="ExamPage">
+    <ScrollView>
+        <VerticalStackLayout>
+            
+            <Label 
+                Text="Exam 2"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                FontAttributes="Bold"
+                FontSize="20"/>
+
+            <Button
+                Text="Exit Exam"
+                HorizontalOptions="End"
+                Margin="20"
+                Clicked="OnGoBackClicked"/>
+
+            <StackLayout>
+            <Label
+                Text="1. Which of the following best describes .NET MAUI?"
+                Margin="10"
+                FontAttributes="Bold"
+                FontSize="15"/>
+            <RadioButton
+                Content="A. A game engine for cross-platform development"
+                GroupName="Q1"/>
+            <RadioButton
+                Content="B. A UI framework for building web apps with Blazor only"
+                GroupName="Q1"/>
+            <RadioButton
+                Content="C. A cross-platform framework for building native mobile and desktop apps using .NET"
+                GroupName="Q1"/>
+            <RadioButton
+                Content="D. A database management tool included with Visual Studio"
+                GroupName="Q1"/>
+
+            <Label
+                Text="2. In .NET MAUI, what is the primary purpose of the MainPage.xaml file?"
+                FontAttributes="Bold"
+                FontSize="15"
+                Margin="10"/>
+
+            <RadioButton
+                Content="A. To store application configuration settings"
+                GroupName="Q2"/>
+            <RadioButton
+                Content="B. To define the UI layout and structure of the main page using XAML"
+                GroupName="Q2"/>
+            <RadioButton
+                Content="C. To register services with dependency injection"
+                GroupName="Q2"/>
+                <RadioButton
+                Content="D. To manage the application's navigation stack"
+                GroupName="Q2"/>
+
+                <Label
+                Text="3. Which platforms does .NET MAUI currently support?"
+                    FontSize="15"
+                    FontAttributes="Bold"
+                    Margin="10"/>
+                <RadioButton
+                    Content="A. iOS, Android, macOS, and Windows"
+                    GroupName="Q3"/>
+                <RadioButton
+                    Content="B. iOS, Android, Linux, and Windows"
+                    GroupName="Q3"/>
+                <RadioButton
+                    Content="C. Android, UWP, Windows Forms, and WPF"
+                    GroupName="Q3"/>
+                <RadioButton
+                    Content="D. Xamarin, Flutter, and React Native"
+                    GroupName="Q3"/>
+
+                <Label
+                    Text="4. Which method is used to navigate to a new page in .NET MAUI (Shell-based app)?"
+                    FontSize="15"
+                    FontAttributes="Bold"
+                    Margin="10"/>
+                <RadioButton
+                    Content="A. NavigationService.NavigateAsync()"
+                    GroupName="Q4"/>
+                <RadioButton
+                    Content="B. Shell.GoToAsync()"
+                    GroupName="Q4"/>
+                <RadioButton
+                    Content="C. App.Navigate()"
+                    GroupName="Q4"/>
+                <RadioButton
+                    Content="D. MainPage.OpenAsync()"
+                    GroupName="Q4"/>
+
+                <Label
+                Text="5. Which of the following are valid layout containers in .NET MAUI? (Select all that apply)"
+                FontSize="15"
+                FontAttributes="Bold"
+                    Margin="10"/>
+
+                <HorizontalStackLayout>
+                    <CheckBox x:Name="option1"/>
+                    <Label Text="StackLayout"
+                       VerticalOptions="Center"/>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <CheckBox x:Name="option2"/>
+                    <Label Text="Grid"
+                           VerticalOptions="Center"/>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <CheckBox x:Name="option3"/>
+                    <Label Text="LinearLayout"
+                           VerticalOptions="Center"/>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <CheckBox x:Name="option4"/>
+                    <Label Text="AbsoluteLayout"
+                           VerticalOptions="Center"/>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <CheckBox x:Name="option5"/>
+                    <Label Text="FlowLayout"
+                           VerticalOptions="Center"/>
+                </HorizontalStackLayout>
+
+
+                <HorizontalStackLayout
+                Margin="10">
+                <Button
+                    WidthRequest="175"
+                    HeightRequest="50"
+                    Text="clear answers"/>
+                
+                <Button
+                    WidthRequest="175"
+                    HeightRequest="50"
+                    Margin="10"
+                    Text="Submit Exam"
+                    Clicked="OnSubmitClicked"/>
+
+
+                </HorizontalStackLayout>
+
+    
+        </StackLayout>
+    </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

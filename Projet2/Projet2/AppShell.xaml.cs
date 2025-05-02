@@ -8,6 +8,11 @@
 
             Routing.RegisterRoute("HomePage", typeof(Homepage));
 
+            Routing.RegisterRoute("ExamPage", typeof (ExamPage));
+
+            Routing.RegisterRoute("ResultPage", typeof(ResultPage));
+
+            Routing.RegisterRoute("MainPage", typeof(MainPage));
         }
     }
 }

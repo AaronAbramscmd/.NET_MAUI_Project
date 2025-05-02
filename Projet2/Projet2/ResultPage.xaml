@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Projet2.ResultPage"
+             Title="ResultPage">
+    <VerticalStackLayout
+        Padding="30,0"
+        Spacing="25">
+        <Label 
+            Text="Result Page"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            FontSize="20"
+            FontAttributes="Bold"/>
+
+        <Button x:Name="goback"
+            Text="Go back to login page"
+            Clicked="BackToLogin"/>
+    </VerticalStackLayout>
+</ContentPage>

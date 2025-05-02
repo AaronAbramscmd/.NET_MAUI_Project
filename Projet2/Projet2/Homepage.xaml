@@ -36,7 +36,8 @@
                Keyboard="Email"/>
 
         <Button x:Name="Exam"
-                Text="Start Exam"/>
+                Text="Start Exam"
+                Clicked="OnClickExam"/>
 
     </VerticalStackLayout>
 </ContentPage>
