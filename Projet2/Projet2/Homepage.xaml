@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Projet2.Homepage"
              Title="Homepage">
-    <VerticalStackLayout
+    <ScrollView>
+        <VerticalStackLayout
         Padding="30,0"
         Spacing="25">
 
@@ -16,21 +17,25 @@
             FontAttributes="Bold"/>
 
         <Entry x:Name="ID"
+               Text=""
                Placeholder="Enter ID"
                ClearButtonVisibility="WhileEditing"
                Keyboard="Numeric"/>
 
         <Entry x:Name="Fname"
+               Text=""
                Placeholder="Enter First Name"
                ClearButtonVisibility="WhileEditing"
                Keyboard="Text"/>
 
         <Entry x:Name="Lname"
+               Text=""
                Placeholder="Enter Last Name"
                ClearButtonVisibility="WhileEditing"
                Keyboard="Text"/>
 
         <Entry x:Name="Email"
+               Text=""
                Placeholder="Enter Email"
                ClearButtonVisibility="WhileEditing"
                Keyboard="Email"/>
@@ -39,5 +44,13 @@
                 Text="Start Exam"
                 Clicked="OnClickExam"/>
 
+        <Label x:Name="FailedForm"
+               Text=""
+               TextColor="Red"
+               FontSize="20"
+               FontAttributes="Bold"
+               HorizontalTextAlignment="Center"/>
+
     </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
