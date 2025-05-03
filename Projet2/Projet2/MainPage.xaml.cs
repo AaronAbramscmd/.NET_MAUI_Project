@@ -1,8 +1,9 @@
 ﻿namespace Projet2
 {
+    
     public partial class MainPage : ContentPage
     {
-     
+        private object password;
 
         public MainPage()
         {
@@ -11,13 +12,22 @@
 
         private void OnCounterClicked(object sender, EventArgs e)
         {
-            Shell.Current.GoToAsync("HomePage");
+            string CorrectPassword = "1234";
+            string entPassword = Password.Text;
+            
+
+            if (entPassword != CorrectPassword)
+            {
+                Wrong.Text = "This password is Incorrect!";
+            }
+            else
+            {
+                
+                Shell.Current.GoToAsync("HomePage");
+            }
         }
 
-        private void OnCreateCLicked(object sender, EventArgs e)
-        {
-            Shell.Current.GoToAsync("CreatePage");
-        }
+       
     }
 
 }

@@ -25,18 +25,22 @@
                 Margin="10"
                 FontAttributes="Bold"
                 FontSize="15"/>
-            <RadioButton
+            <RadioButton x:Name="E1"
                 Content="A. A game engine for cross-platform development"
-                GroupName="Q1"/>
-            <RadioButton
+                GroupName="Q1"
+                IsChecked="False"/>
+            <RadioButton x:Name="E2"
                 Content="B. A UI framework for building web apps with Blazor only"
-                GroupName="Q1"/>
-            <RadioButton
+                GroupName="Q1"
+                IsChecked="False"/>
+            <RadioButton x:Name="E3"
                 Content="C. A cross-platform framework for building native mobile and desktop apps using .NET"
-                GroupName="Q1"/>
-            <RadioButton
+                GroupName="Q1"
+                IsChecked="False"/>
+            <RadioButton x:Name="E4"
                 Content="D. A database management tool included with Visual Studio"
-                GroupName="Q1"/>
+                GroupName="Q1"
+                IsChecked="False"/>
 
             <Label
                 Text="2. In .NET MAUI, what is the primary purpose of the MainPage.xaml file?"
@@ -44,54 +48,66 @@
                 FontSize="15"
                 Margin="10"/>
 
-            <RadioButton
+            <RadioButton x:Name="E5"
                 Content="A. To store application configuration settings"
-                GroupName="Q2"/>
-            <RadioButton
+                GroupName="Q2"
+                IsChecked="False"/>
+            <RadioButton x:Name="E6"
                 Content="B. To define the UI layout and structure of the main page using XAML"
-                GroupName="Q2"/>
-            <RadioButton
+                GroupName="Q2"
+                IsChecked="False"/>
+            <RadioButton x:Name="E7"
                 Content="C. To register services with dependency injection"
-                GroupName="Q2"/>
-                <RadioButton
-                Content="D. To manage the application's navigation stack"
-                GroupName="Q2"/>
+                GroupName="Q2"
+                IsChecked="False"/>
+            <RadioButton x:Name="E8"
+                Content= "D. To manage the application's navigation stack"
+                GroupName="Q2"
+                IsChecked="False"/>
 
                 <Label
-                Text="3. Which platforms does .NET MAUI currently support?"
+                    Text="3. Which platforms does .NET MAUI currently support?"
                     FontSize="15"
                     FontAttributes="Bold"
                     Margin="10"/>
-                <RadioButton
+                <RadioButton x:Name="E9"
                     Content="A. iOS, Android, macOS, and Windows"
-                    GroupName="Q3"/>
-                <RadioButton
+                    GroupName="Q3"
+                    IsChecked="False"/>
+                <RadioButton x:Name="E10"
                     Content="B. iOS, Android, Linux, and Windows"
-                    GroupName="Q3"/>
-                <RadioButton
+                    GroupName="Q3"
+                    IsChecked="False"/>
+                <RadioButton x:Name="E11"
                     Content="C. Android, UWP, Windows Forms, and WPF"
-                    GroupName="Q3"/>
-                <RadioButton
+                    GroupName="Q3"
+                    IsChecked="False"/>
+                <RadioButton x:Name="E12"
                     Content="D. Xamarin, Flutter, and React Native"
-                    GroupName="Q3"/>
+                    GroupName="Q3"
+                    IsChecked="False"/>
 
                 <Label
                     Text="4. Which method is used to navigate to a new page in .NET MAUI (Shell-based app)?"
                     FontSize="15"
                     FontAttributes="Bold"
                     Margin="10"/>
-                <RadioButton
+                <RadioButton x:Name="E13"
                     Content="A. NavigationService.NavigateAsync()"
-                    GroupName="Q4"/>
-                <RadioButton
+                    GroupName="Q4"
+                    IsChecked="False"/>
+                <RadioButton x:Name="E14"
                     Content="B. Shell.GoToAsync()"
-                    GroupName="Q4"/>
-                <RadioButton
+                    GroupName="Q4"
+                    IsChecked="False"/>
+                <RadioButton x:Name="E15"
                     Content="C. App.Navigate()"
-                    GroupName="Q4"/>
-                <RadioButton
+                    GroupName="Q4"
+                    IsChecked="False"/>
+                <RadioButton x:Name="E16"
                     Content="D. MainPage.OpenAsync()"
-                    GroupName="Q4"/>
+                    GroupName="Q4"
+                    IsChecked="False"/>
 
                 <Label
                 Text="5. Which of the following are valid layout containers in .NET MAUI? (Select all that apply)"
@@ -131,7 +147,8 @@
                 <Button
                     WidthRequest="175"
                     HeightRequest="50"
-                    Text="clear answers"/>
+                    Text="clear answers"
+                    Clicked="OnClearClicked"/>
                 
                 <Button
                     WidthRequest="175"
