@@ -7,14 +7,13 @@ public partial class Homepage : ContentPage
 {
     public class Student
     {
-        public string StudentID { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public string ID { get; set; }
+        public string Fname { get; set; }
+        public string Lname { get; set; }
         public string Email { get; set; }
     }
+
     List<Student> students;
-
-
 
     public Homepage()
 	{
@@ -29,6 +28,8 @@ public partial class Homepage : ContentPage
     }
     private async void OnClickExam(object sender, EventArgs e)
 	{
+
+
         string StudentID = ID.Text;
         string FirstN = Fname.Text;
         string LastN = Lname.Text;
@@ -43,15 +44,13 @@ public partial class Homepage : ContentPage
         {
             var student = new Student
             {
-                StudentID = StudentID,
-                FirstName = FirstN,
-                LastName = LastN,
-                Email = Gmail
+                ID = StudentID,
+                Fname = FirstN,
+                Lname = LastN,
+                Email = Gmail,
             };
             students.Add(student);
             await Shell.Current.GoToAsync("ExamPage");
-            //student.Add (StudentID);
-            //Shell.Current.GoToAsync("ExamPage");
             //FailedForm.Text = StudentID;
         }
         

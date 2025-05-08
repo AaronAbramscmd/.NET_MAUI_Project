@@ -1,14 +1,22 @@
 using System.Collections;
+using System.Threading.Tasks;
+
+
 
 namespace Projet2;
 
 public partial class ExamPage : ContentPage
 {
+    
+
 	public ExamPage()
 	{
+       
+        
         InitializeComponent();
+        
 
-	}
+    }
 	private void OnGoBackClicked(object sender, EventArgs e)
 	{
         Shell.Current.GoToAsync("..");
@@ -16,7 +24,7 @@ public partial class ExamPage : ContentPage
 
     
 
-    private void OnSubmitClicked(object sender, EventArgs e)
+    private async void OnSubmitClicked(object sender, EventArgs e)
 	{
         bool IsRadioButtonChecked(StackLayout group)
         {
@@ -32,6 +40,26 @@ public partial class ExamPage : ContentPage
                 .Any (rb => rb.IsChecked == true);
         }
 
+        int score = 0;
+
+        if (E3.IsChecked == true)
+        {
+            score += 20;
+        }
+        if (E6.IsChecked == true)
+        {
+            score += 20;
+        }
+        if (E9.IsChecked == true)
+        {
+            score += 20;
+        }
+        if(E14.IsChecked == true)
+        {
+            score += 20;
+        }
+
+        
 
 
         if (!IsRadioButtonChecked(Questions))
@@ -40,7 +68,7 @@ public partial class ExamPage : ContentPage
         }
         else
         {
-            Shell.Current.GoToAsync("ResultPage");
+            await Navigation.PushAsync(new ResultPage(score));
         }
 
 

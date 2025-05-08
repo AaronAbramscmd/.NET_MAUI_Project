@@ -12,6 +12,21 @@
             HorizontalOptions="Center" 
             FontSize="20"
             FontAttributes="Bold"/>
+        
+        <Label x:Name="ExamQ1"
+            Text="1. Which of the following best describes .NET MAUI?"
+            FontAttributes="Bold"
+            FontSize="15"/>
+
+        <Label x:Name="Answer1"
+               Margin="10"
+               Text="asd"
+               FontSize="15"/>
+        
+        <Label x:Name="ExamQ2"
+            Text="2. In .NET MAUI, what is the primary purpose of the MainPage.xaml file?"
+            FontAttributes="Bold"
+            FontSize="15"/>
 
         <Button x:Name="goback"
             Text="Logout"
