@@ -58,7 +58,10 @@ public partial class ExamPage : ContentPage
         {
             score += 20;
         }
-
+        if(option1.IsChecked && option2.IsChecked && option4.IsChecked && !option3.IsChecked && !option5.IsChecked)
+        {
+            score += 20;
+        } 
         
 
 
