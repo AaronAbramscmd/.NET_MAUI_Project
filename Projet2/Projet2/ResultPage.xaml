@@ -14,7 +14,20 @@
             FontAttributes="Bold"/>
 
         <Button x:Name="goback"
-            Text="Go back to login page"
-            Clicked="BackToLogin"/>
+            Text="Logout"
+            Clicked="BackToLogin"
+                WidthRequest="100"
+                HeightRequest="50"/>
+
+
+        <Button x:Name="StuReport"
+                Text="Report"
+                Clicked="OnReportClicked"
+                WidthRequest="100"
+                HeightRequest="50"/>
+
+        <Label
+            Text="Want to see how other students did click report"
+            HorizontalOptions="Center"/>
     </VerticalStackLayout>
 </ContentPage>

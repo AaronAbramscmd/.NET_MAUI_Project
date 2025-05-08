@@ -11,4 +11,9 @@ public partial class ResultPage : ContentPage
 	{
 		Shell.Current.GoToAsync("//MainPage");
 	}
+
+	private void OnReportClicked(object sender, EventArgs e)
+	{
+		Shell.Current.GoToAsync("ReportPage");
+	}
 }
