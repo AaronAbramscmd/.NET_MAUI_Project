@@ -3,7 +3,7 @@
     
     public partial class MainPage : ContentPage
     {
-        private object password;
+        
 
         public MainPage()
         {

@@ -3,9 +3,15 @@ namespace Projet2;
 
 public partial class Homepage : ContentPage
 {
+    public class Student
+    {
+        public string ID { get; set; }
+        public string Fname { get; set; }
+        public string Lname { get; set; }
+        public string Email { get; set; }
+    }
+
     List<string> student;
-
-
 
     public Homepage()
 	{
@@ -20,7 +26,6 @@ public partial class Homepage : ContentPage
     }
     private void OnClickExam(object sender, EventArgs e)
 	{
-        student.Add(ID.Text);
 
 
         string StudentID = ID.Text;
@@ -35,7 +40,13 @@ public partial class Homepage : ContentPage
         }
         else
         {
-            student.Add (StudentID);
+            var student = new Student
+            {
+                ID = StudentID,
+                Fname = FirstN,
+                Lname = LastN,
+                Email = Gmail,
+            };
             Shell.Current.GoToAsync("ExamPage");
             //FailedForm.Text = StudentID;
         }

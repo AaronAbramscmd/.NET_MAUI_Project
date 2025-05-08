@@ -20,7 +20,7 @@
                 Clicked="OnGoBackClicked"/>
 
             <StackLayout x:Name="Questions"> 
-            <Label
+            <Label x:Name="ExamQ1"
                 Text="1. Which of the following best describes .NET MAUI?"
                 Margin="10"
                 FontAttributes="Bold"
@@ -28,21 +28,25 @@
             <RadioButton x:Name="E1"
                 Content="A. A game engine for cross-platform development"
                 GroupName="Q1"
-                IsChecked="False"/>
+                Value="A"
+               />
             <RadioButton x:Name="E2"
                 Content="B. A UI framework for building web apps with Blazor only"
                 GroupName="Q1"
-                IsChecked="False"/>
+                Value="B"
+                />
             <RadioButton x:Name="E3"
                 Content="C. A cross-platform framework for building native mobile and desktop apps using .NET"
                 GroupName="Q1"
-                IsChecked="False"/>
+                Value="C"
+                />
             <RadioButton x:Name="E4"
                 Content="D. A database management tool included with Visual Studio"
                 GroupName="Q1"
-                IsChecked="False"/>
+                Value="D"
+                />
 
-            <Label
+            <Label x:Name="ExamQ2"
                 Text="2. In .NET MAUI, what is the primary purpose of the MainPage.xaml file?"
                 FontAttributes="Bold"
                 FontSize="15"
@@ -117,27 +121,32 @@
                     Margin="10"/>
 
                 <HorizontalStackLayout>
-                    <CheckBox x:Name="option1"/>
+                    <CheckBox x:Name="option1"
+                              IsChecked ="False"/>
                     <Label Text="StackLayout"
                        VerticalOptions="Center"/>
                 </HorizontalStackLayout>
                 <HorizontalStackLayout>
-                    <CheckBox x:Name="option2"/>
+                    <CheckBox x:Name="option2"
+                              IsChecked="False"/>
                     <Label Text="Grid"
                            VerticalOptions="Center"/>
                 </HorizontalStackLayout>
                 <HorizontalStackLayout>
-                    <CheckBox x:Name="option3"/>
+                    <CheckBox x:Name="option3"
+                              IsChecked="False"/>
                     <Label Text="LinearLayout"
                            VerticalOptions="Center"/>
                 </HorizontalStackLayout>
                 <HorizontalStackLayout>
-                    <CheckBox x:Name="option4"/>
+                    <CheckBox x:Name="option4"
+                              IsChecked="False"/>
                     <Label Text="AbsoluteLayout"
                            VerticalOptions="Center"/>
                 </HorizontalStackLayout>
                 <HorizontalStackLayout>
-                    <CheckBox x:Name="option5"/>
+                    <CheckBox x:Name="option5"
+                              IsChecked="False"/>
                     <Label Text="FlowLayout"
                            VerticalOptions="Center"/>
                 </HorizontalStackLayout>
