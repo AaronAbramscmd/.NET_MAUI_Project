@@ -19,7 +19,7 @@
                 Margin="20"
                 Clicked="OnGoBackClicked"/>
 
-            <StackLayout>
+            <StackLayout x:Name="Questions"> 
             <Label
                 Text="1. Which of the following best describes .NET MAUI?"
                 Margin="10"
@@ -86,7 +86,7 @@
                     Content="D. Xamarin, Flutter, and React Native"
                     GroupName="Q3"
                     IsChecked="False"/>
-
+            
                 <Label
                     Text="4. Which method is used to navigate to a new page in .NET MAUI (Shell-based app)?"
                     FontSize="15"
@@ -108,7 +108,8 @@
                     Content="D. MainPage.OpenAsync()"
                     GroupName="Q4"
                     IsChecked="False"/>
-
+            </StackLayout>
+            <StackLayout x:Name="CheckBoxGroup">
                 <Label
                 Text="5. Which of the following are valid layout containers in .NET MAUI? (Select all that apply)"
                 FontSize="15"
@@ -140,9 +141,10 @@
                     <Label Text="FlowLayout"
                            VerticalOptions="Center"/>
                 </HorizontalStackLayout>
+            </StackLayout>
 
 
-                <HorizontalStackLayout
+            <HorizontalStackLayout
                 Margin="10">
                 <Button
                     WidthRequest="175"
@@ -160,8 +162,15 @@
 
                 </HorizontalStackLayout>
 
-    
-        </StackLayout>
+                <Label x:Name="NoAnswers"
+                    Padding="30,0"
+                    Text=""
+                    TextColor="Red"
+                    FontSize="20"
+                    FontAttributes="Bold"/>
+
+
+            
     </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

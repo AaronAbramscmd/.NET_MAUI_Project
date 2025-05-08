@@ -13,6 +13,8 @@
             Routing.RegisterRoute("ResultPage", typeof(ResultPage));
 
             Routing.RegisterRoute("MainPage", typeof(MainPage));
+
+            Routing.RegisterRoute("ReportPage", typeof(ReportPage));
         }
     }
 }
