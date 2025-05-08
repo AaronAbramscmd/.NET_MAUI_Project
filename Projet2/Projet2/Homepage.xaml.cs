@@ -1,16 +1,25 @@
 
+using System.Threading.Tasks;
+
 namespace Projet2;
 
 public partial class Homepage : ContentPage
 {
-    List<string> student;
+    public class Student
+    {
+        public string StudentID { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Email { get; set; }
+    }
+    List<Student> students;
 
 
 
     public Homepage()
 	{
 		InitializeComponent();
-        student = new List<string>();
+        students = new List<Student>();
 
 
 	}
@@ -18,11 +27,8 @@ public partial class Homepage : ContentPage
     {
         base.OnAppearing();
     }
-    private void OnClickExam(object sender, EventArgs e)
+    private async void OnClickExam(object sender, EventArgs e)
 	{
-        student.Add(ID.Text);
-
-
         string StudentID = ID.Text;
         string FirstN = Fname.Text;
         string LastN = Lname.Text;
@@ -35,8 +41,17 @@ public partial class Homepage : ContentPage
         }
         else
         {
-            student.Add (StudentID);
-            Shell.Current.GoToAsync("ExamPage");
+            var student = new Student
+            {
+                StudentID = StudentID,
+                FirstName = FirstN,
+                LastName = LastN,
+                Email = Gmail
+            };
+            students.Add(student);
+            await Shell.Current.GoToAsync("ExamPage");
+            //student.Add (StudentID);
+            //Shell.Current.GoToAsync("ExamPage");
             //FailedForm.Text = StudentID;
         }
         
